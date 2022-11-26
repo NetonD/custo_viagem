@@ -1,5 +1,6 @@
 package com.example.custoviagem
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun updateResultValue(view: View) {
 
         val autonomy = binding.editAutonomy.text.toString().toFloat()
@@ -36,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         binding.textTotalValue.text = "R$ ${(distance * price) / autonomy}"
     }
 
-    fun invalidField(): InvalidField {
+    private fun invalidField(): InvalidField {
         val autonomyText = binding.editAutonomy.text.toString()
         val distanceText = binding.editDistance.text.toString()
         val priceText = binding.editPrice.text.toString()
@@ -48,12 +50,12 @@ class MainActivity : AppCompatActivity() {
         return InvalidField.ALL_VALID
     }
 
-    fun showToastError(field: InvalidField) {
+    private fun showToastError(field: InvalidField) {
         val message = when (field) {
-            InvalidField.DISTANCE -> "Insira um valor válido para distância."
-            InvalidField.PRICE -> "Insira um valor válido para preço."
-            InvalidField.AUTONOMY -> "Insira um valor válido para autonomia."
-            else -> "Erro inesperado"
+            InvalidField.DISTANCE -> R.string.invalid_distance
+            InvalidField.PRICE -> R.string.invalid_price
+            InvalidField.AUTONOMY -> R.string.invalid_autonomy
+            else -> R.string.unexpected_error
         }
 
         Toast

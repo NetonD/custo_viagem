@@ -8,4 +8,8 @@
     <string name="total_de_km">Total de quilômetros</string>
     <string name="distancia">Distância</string>
     <string name="calcular">Calcular</string>
+    <string name="invalid_distance">Insira um valor válido para distância.</string>
+    <string name="invalid_price">Insira um valor válido para preço.</string>
+    <string name="invalid_autonomy">Insira um valor válido para autonomia.</string>
+    <string name="unexpected_error">Erro inesperado</string>
 </resources>
