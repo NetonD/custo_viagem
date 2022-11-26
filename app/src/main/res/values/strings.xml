@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">CustoViagem</string>
+    <string name="preco_por_litro">Preço por litro</string>
+    <string name="gasto_sera_de">Seu gasto total será de:</string>
+    <string name="kms_por_litro">KMS por litro</string>
+    <string name="autonomia">Autonomia</string>
+    <string name="preco">Preço</string>
+    <string name="total_de_km">Total de quilômetros</string>
+    <string name="distancia">Distância</string>
+    <string name="calcular">Calcular</string>
 </resources>
